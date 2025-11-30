@@ -50,18 +50,10 @@ Room-Zero-Booking-site/
 2. Extract all files to a folder
 3. Open `index.html` in your web browser
 4. Navigate through the website using the navigation menu
-
-## Screenshots
-*(You can add screenshots here after uploading them)*
-
-## Live Preview
-[View Live Website](#)
-*(Add your GitHub Pages link here after deployment)*
-
 ---
 
-**Course**: Web Development  
-**Institution**: [Your College/University Name]  
-**Submission Date**: [Date]  
+**Course**: ICT 
+**Institution**: [FAST NUCES]  
+**Submission Date**: [11/30/2025]  
 
 © 2025 Room Zero. All rights reserved.
