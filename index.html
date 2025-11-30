@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Zero - Escape Room Booking</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images\logo.jpg" alt="ROOM ZERO Logo">
+        </div>
+        <nav>
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="reviews.html" class="nav-link">Reviews</a>
+            <a href="#booking-modal" class="nav-link">Book Now</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="section active">
+            <div class="hero">
+                <h1>ROOM ZERO</h1>
+                <p>YOUR ESCAPE BEGINS AT ZERO.</p>
+            </div>
+            <div class="rooms-grid">
+                <div class="room-card" data-room="VICTORIAN DETECTIVE MYSTERY">
+                    <img src="images\victorian.png" alt="Victorian Detective Mystery Room Image">
+                    <h3>VICTORIAN DETECTIVE MYSTERY</h3>
+                    <p>Sherlock style investigation with hidden journals, coded phones, and secret compartments.<br><br></p>
+                    <p>Difficulty: Easy</p>
+                    <p>Capacity: 2 Players</p>
+                    <p>Price: $30/person</p>
+                    <button class="book-btn">BOOK NOW</button>
+                </div>
+                <div class="room-card" data-room="HAUNTED MANSION ESCAPE">
+                    <img src="images\image.png" alt="Victorian Detective Mystery Room Image">
+                    <h3>HAUNTED MANSION ESCAPE</h3>
+                    <p>Mysterious flickering lights, talking portraits, and séance table clues<br><br></p>
+                    <p>Difficulty: Medium</p>
+                    <p>Capacity: 4 Players</p>
+                    <p>Price: $35/person</p>
+                    <button class="book-btn">BOOK NOW</button>
+                </div>
+                <div class="room-card" data-room="SPACESHIP CRASH LANDING">
+                    <img src="images\image copy.png" alt="Victorian Detective Mystery Room Image">
+                    <h3>SPACESHIP CRASH LANDING</h3>
+                    <p>Repair control panels, follow AI commands, and escape before the sun explodes.<br><br></p>
+                    <p>Difficulty: Hard</p>
+                    <p>Capacity: 6 Players</p>
+                    <p>Price: $40/person</p>
+                    <button class="book-btn">BOOK NOW</button>
+                </div>
+                <div class="room-card" data-room="TIME TRAVELER'S LAB">
+                    <img src="images\image copy 2.png" alt="Victorian Detective Mystery Room Image">
+                    <h3>TIME TRAVELER'S LAB</h3>
+                    <p>Jump between timelines and solve puzzles in different eras.<br><br></p>
+                    <p>Difficulty: Extreme</p>
+                    <p>Capacity: 8 Players</p>
+                    <p>Price: $45/person</p>
+                    <button class="book-btn">BOOK NOW</button>
+                </div>
+                <div class="room-card" data-room="FLOOR ZERO">
+                    <img src="images\image copy 3.png" alt="Floor Zero Escape Room Image">
+                    <h3>FLOOR ZERO</h3>
+                    <p>The experience resets. Define your own impossibility. Your unique challenge starts here, built from the ground up to test your limits.<br><br></p>
+                    <p>Difficulty: Customizable on spot</p>
+                    <p>Capacity: Customizable on spot</p>
+                    <p>Price: According to Customization</p>
+                    <button class="book-btn">BOOK NOW</button>
+                </div>
+                <div class="room-card" data-room="THE FORGOTTEN FACILITY (Big Room)">
+                    <img src="images\image copy 4.png" alt="Forgotten Facility Room Image">
+                    <h3>THE FORGOTTEN FACILITY (Big Room)</h3>
+                    <p>A huge research facility with teamwork puzzles, power restoration, hidden passages, and optional Hunter Mode (1–4 hunters).<br><br></p>
+                    <p>Difficulty: Almost Impossible </p>
+                    <p>Capacity: 8-12 (players)</p>
+                    <p>Price: $55/person</p>
+                    <button class="book-btn">BOOK NOW</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Room Zero. All rights reserved.</p>
+    </footer>
+
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title">Room: [Room Name]</h2>
+            <form id="booking-form">
+                <label for="date">Date of Entry:</label>
+                <input type="date" id="date" required>
+                <label for="time">Time Slot:</label>
+                <select id="time" required>
+                    <option value="">Select Time</option>
+                    <option value="10:00">10:00 AM</option>
+                    <option value="12:00">12:00 PM</option>
+                    <option value="14:00">2:00 PM</option>
+                    <option value="16:00">4:00 PM</option>
+                    <option value="18:00">6:00 PM</option>
+                </select>
+                <label for="email">Contact Email:</label>
+                <input type="email" id="email" required>
+                <button type="submit" class="submit-btn">INITIATE BOOKING</button>
+            </form>
+            <div id="success-message" class="hidden">BOOKING INITIATED!</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

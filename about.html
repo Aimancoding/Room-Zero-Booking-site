@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Room Zero</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #1C1C1C;
+            color: #FFFFFF;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            background-color: #000000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            z-index: 1000;
+            box-shadow: 0 0 10px #FF45D9;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+
+        nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-link {
+            color: #DCDCDC;
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+
+        .nav-link.active, .nav-link:hover {
+            color: #FF45D9;
+            text-shadow: 0 0 10px #FF45D9;
+        }
+
+        /* Main Content */
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            text-shadow: 0 0 20px #FF45D9;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 20px #FF45D9; }
+            to { text-shadow: 0 0 30px #FF45D9, 0 0 40px #FF45D9; }
+        }
+
+        /* Hero Section */
+        .about-hero {
+            background: linear-gradient(135deg, #333333, #1C1C1C);
+            border: 2px solid #FF45D9;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(255, 69, 217, 0.3);
+        }
+
+        .about-hero p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: #DCDCDC;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            background-color: #333333;
+            border: 2px solid #FF45D9;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(255, 69, 217, 0.5);
+        }
+
+        .stat-number {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            color: #FF45D9;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #DCDCDC;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Mission Section */
+        .mission-section {
+            background-color: #333333;
+            border-left: 4px solid #FF45D9;
+            padding: 2rem;
+            margin: 3rem 0;
+        }
+
+        .mission-section h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            color: #FF45D9;
+            margin-bottom: 1rem;
+        }
+
+        .mission-section p {
+            font-size: 1.1rem;
+            color: #DCDCDC;
+            margin-bottom: 1rem;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #333333, #252525);
+            border: 2px solid #FF45D9;
+            padding: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(255, 69, 217, 0.6);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .feature-card h4 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.4rem;
+            color: #FF45D9;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: #DCDCDC;
+        }
+
+        /* Team Section */
+        .team-section {
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .team-section h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            color: #FF45D9;
+            margin-bottom: 2rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .team-member {
+            background-color: #333333;
+            border: 2px solid #FF45D9;
+            padding: 2rem;
+            transition: transform 0.3s;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #FF45D9, #e639c4);
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-family: 'Orbitron', sans-serif;
+            color: #FFFFFF;
+        }
+
+        .team-member h5 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member p {
+            color: #DCDCDC;
+            font-size: 0.9rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #FF45D9, #e639c4);
+            padding: 3rem;
+            text-align: center;
+            margin: 3rem 0;
+            border-radius: 10px;
+        }
+
+        .cta-section h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #FFFFFF;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #FFFFFF;
+        }
+
+        .cta-btn {
+            background-color: #1C1C1C;
+            color: #FF45D9;
+            border: 2px solid #FFFFFF;
+            padding: 1rem 3rem;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-btn:hover {
+            background-color: #FFFFFF;
+            color: #1C1C1C;
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333333;
+            color: #DCDCDC;
+            border-top: 2px solid #FF45D9;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .section h2 {
+                font-size: 2rem;
+            }
+            
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .about-hero {
+                padding: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="ROOM ZERO Logo">
+        </div>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link active">About Us</a>
+            <a href="reviews.html" class="nav-link">Reviews</a>
+            <a href="index.html#booking-modal" class="nav-link">Book Now</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section active">
+            <h2>About Us</h2>
+
+            <!-- Hero Section -->
+            <div class="about-hero">
+                <p>
+                    Room Zero is the ultimate cyberpunk escape experience. Immerse yourself in high-thriller adventures where every decision counts.
+                    Our rooms are designed for thrill-seekers, blending mystery, technology, and adrenaline.
+                </p>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">10K+</span>
+                    <span class="stat-label">Players</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">Escape Rooms</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">1</span>
+                    <span class="stat-label">Giant Facility</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">1</span>
+                    <span class="stat-label">Customizable Room</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">35%</span>
+                    <span class="stat-label">Escape Rate</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">4.9★</span>
+                    <span class="stat-label">Rating</span>
+                </div>
+            </div>
+
+            <!-- Mission Section -->
+            <div class="mission-section">
+                <h3>Our Mission</h3>
+                <p>
+                    In a world saturated with the mundane, Room Zero is the digital breach—your entry point into the unknown. These challenges
+                    are not just games; they are psychological missions where every clue matters. We transport you into evolving storylines
+                    filled with danger, logic, and pressure.
+                </p>
+                <p>
+                    Whether you're a detective, a survivor, a time-traveler, or a test subject — Room Zero becomes your battleground.
+                </p>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🔐</span>
+                    <h4>Immersive Storylines</h4>
+                    <p>Every room tells a story. You're not just solving puzzles—you're living through a cyberpunk thriller.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🧠</span>
+                    <h4>Mind-Bending Puzzles</h4>
+                    <p>Challenge your logic, creativity, and teamwork with puzzles designed to push your limits.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">⚡</span>
+                    <h4>High-Tech Experience</h4>
+                    <p>Cutting-edge tech, interactive elements, and atmospheric design create an unforgettable adventure.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">👥</span>
+                    <h4>Team Building</h4>
+                    <p>Perfect for groups, corporate events, or friends seeking an adrenaline-fueled challenge.</p>
+                </div>
+            </div>
+
+            <!-- Team Section -->
+            <div class="team-section">
+                <h3>Meet the Architects</h3>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="avatar">F</div>
+                        <h5>Firzam</h5>
+                        <p>Company Director</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="avatar">A</div>
+                        <h5>Aiman</h5>
+                        <p>Company Director</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="avatar">Z</div>
+                        <h5>Zero</h5>
+                        <p>Lead Designer & Puzzle Master</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="avatar">N</div>
+                        <h5>Nexus</h5>
+                        <p>Story Architect & Narrator</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="avatar">C</div>
+                        <h5>Cipher</h5>
+                        <p>Tech Engineer & Systems</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="avatar">V</div>
+                        <h5>Void</h5>
+                        <p>Experience Curator</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+                <h3>Ready to Enter the Zero?</h3>
+                <p>Your mission awaits. Will you escape, or become part of the story?</p>
+                <a href="index.html#booking-modal" class="cta-btn">BOOK YOUR ADVENTURE</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Room Zero. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
