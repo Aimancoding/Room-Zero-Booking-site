@@ -13,6 +13,10 @@ Room Zero is a cyberpunk-themed escape room booking website. It features immersi
 
 ## Group Members
 - **UMM E AIMAN** - Developer
+- Designed and developed the website homepage, establishing the overall visual layout and user-facing design.
+Defined the website's primary color theme and selected visual assets to maintain a consistent interface.
+Designed the Room Zero logo and integrated it into the website's branding.
+Collaborated with a teammate who developed the About Us section.
 - **FIRZAM KHAN** - Developer
 
 ## Technologies Used
